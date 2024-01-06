@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Registration Form</title>
+    <link rel="stylesheet" href="CSS/all.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    
+    <section class="container">
+        <div class="form">
+            <div class="image-form">
+                <div class="image">
+                    <img src="images/music.png" alt="Music" height="450px">
+                </div> <!-- End Image -->
+                <div class="paragraph">
+                    <h2>MUSIC SCHOOL REGISTRATION</h2>
+                    <p>Register to our music school from below</p>
+                </div> <!-- End Paragraph -->
+            </div> <!-- End Image Form -->
+
+            <div class="formDiv">
+                <form>
+                    <div class="block name">
+                        <div class="labelAsterisk">
+                            <label>Name</label>
+                            <i class="fas fa-asterisk"></i>
+                        </div> <!-- End Label Asterisk -->
+                        <div class="inputs">
+                           <div class="inputOne">
+                                <input type="text" name="first name" onblur="nameBlur()"><br>
+                                <label>First Name</label>
+                           </div> <!-- End Input One -->
+                           <div class="inputTwo">
+                                <input type="text" name="last name" onblur="nameBlur()"><br>
+                                <label>Last Name</label>
+                            </div> <!-- End Input Two -->
+                        </div> <!-- End Inputs -->
+                        <div class="error name-error">
+                            <span><img src="images/error.png" alt="Error Icon" width="13px" height="13px"></span>
+                            <p>This field is required !</p>
+                        </div>
+                    </div> <!-- End Name -->
+
+                    <div class="block email">
+                        <div class="labelAsterisk">
+                            <label>Email</label>
+                            <i class="fas fa-asterisk"></i>
+                        </div> <!-- End Label Asterisk -->
+                        <div class="inputOne">
+                            <input type="email" name="email" onblur="emailBlur()"><br>
+                            <label>Email</label>
+                        </div> <!-- End Input One -->
+                        <div class="error email-error">
+                            <span><img src="images/error.png" alt="Error Icon" width="13px" height="13px"></span>
+                            <p>This field is required !</p>
+                        </div>
+                    </div> <!-- End Email -->
+
+                    <div class="block phoneNumber">
+                       <div class="labelAsterisk">
+                            <label>Phone Number</label>
+                            <i class="fas fa-asterisk"></i>
+                       </div>  <!-- End Label Asterisk -->
+                        <div class="inputOne">
+                            <input type="text" name="number" minlength="11" maxlength="11" onblur="phoneNumberBlur()"><br>
+                            <label>Number</label>
+                       </div> <!-- End Input One -->
+                       <div class="error phoneNumber-error">
+                            <span><img src="images/error.png" alt="Error Icon" width="13px" height="13px"></span>
+                            <p>This field is required !</p>
+                        </div>
+                    </div> <!-- End Phone Number -->
+
+                   <div class="block birthDate">
+                        <div class="labelAsterisk">
+                            <label>Birth Date</label>
+                            <i class="fas fa-asterisk"></i>
+                       </div>  <!-- End Label Asterisk -->
+                        <div class="selects">
+                           <div class="selectOne">
+                                <select name="months" id="formMonths" onblur="birthDateBlur()">
+                                    <option value=""></option>
+                                </select><br>
+                                <label>Month</label>
+                           </div> <!-- End Select One -->
+    
+                           <div class="selectTwo">
+                                <select name="days" id="formDays" onblur="birthDateBlur()">
+                                    <option value=""></option>
+                                </select><br>
+                                <label>Day</label>
+                           </div> <!-- End Select Two -->
+    
+                           <div class="selectThree">
+                                <select name="years" id="formYears" onblur="birthDateBlur()">
+                                    <option value=""></option>
+                                </select><br>
+                                <label>Year</label>
+                           </div> <!-- End Select Three -->
+                        </div> <!-- End Selects -->
+                        <div class="error birthDate-error">
+                            <span><img src="images/error.png" alt="Error Icon" width="13px" height="13px"></span>
+                            <p>This field is required !</p>
+                        </div>
+                    </div> <!-- End Birth Date -->
+
+                    <div class="block instrument">
+                        <div class="labelAsterisk">
+                            <label>Choice of Instrument</label>
+                            <i class="fas fa-asterisk"></i>
+                       </div>  <!-- End Label Asterisk -->
+                        <select name="instruments" id="formInstruments" onblur="instrumentBlur()">
+                            <option value="">Please Select</option>
+                        </select>
+                        <div class="error instrument-error">
+                            <span><img src="images/error.png" alt="Error Icon" width="13px" height="13px"></span>
+                            <p>This field is required !</p>
+                        </div>
+                    </div> <!-- End Instruments -->
+
+                    <div class="block days" onclick="daysBlur()">
+                        <div class="labelAsterisk">
+                            <label>Pick Days for Classes</label>
+                            <i class="fas fa-asterisk"></i><br>
+                       </div>  <!-- End Label Asterisk -->
+                       
+                        <div class="checks">
+                            <div class="check">
+                                <input type="checkbox" value="Saturday" id="Sat" name="days[]">
+                                <label for="Sat"></label>
+                                <label>Saturday</label><br> 
+                           </div>  
+                            <div class="check">
+                                <input type="checkbox" value="Sunday" id="Sun" name="days[]">
+                                <label for="Sun"></label>
+                                <label>Sunday</label><br>  
+                            </div>
+                           <div class="check">
+                                <input type="checkbox" value="Monday" id="Mon" name="days[]">
+                                <label for="Mon"></label>
+                                <label>Monday</label><br>
+                           </div>
+                            <div class="check">
+                                <input type="checkbox" value="Tuesday" id="Tus" name="days[]">
+                                <label for="Tus"></label>
+                                <label>Tuesday</label><br>
+                            </div>
+                           <div class="check">
+                                <input type="checkbox" value="Wednesday" id="Wed" name="days[]">
+                                <label for="Wed"></label>
+                                <label>Wednesday</label><br>  
+                           </div>  
+                            <div class="check">
+                                <input type="checkbox" value="Thursday" id="Thr" name="days[]">
+                                <label for="Thr"></label>
+                                <label>Thursday</label><br>  
+                            </div> 
+                            <div class="check">
+                                <input type="checkbox" value="Friday" id="Fri" name="days[]">
+                                <label for="Fri"></label>
+                                <label>Friday</label><br> 
+                            </div>  
+                        </div> <!-- End Checks -->
+                        <div class="error days-error">
+                            <span><img src="images/error.png" alt="Error Icon" width="13px" height="13px"></span>
+                            <p>This field is required !</p>
+                        </div>
+                    </div> <!-- End Days -->
+
+                    <div class="block comments">
+                        <label>Comments</label><br>
+                        <textarea cols="64" rows="8"></textarea>
+                    </div> <!-- End Comments -->
+
+                    <div class="submit">
+                        <input type="submit" id="submitBtn">
+                    </div> <!-- End Submit -->
+                </form>
+            </div>
+        </div> <!-- End Form -->
+    </section>
+
+    <script src="JS/code.js"></script>
+</body>
+</html>

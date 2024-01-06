@@ -1,0 +1,227 @@
+:root{
+    --textColor : rgb(44, 51, 69);
+    --backgroundColor : #9ecec4;
+    --whiteColor : #FFF;
+    --grayColor : #7B7D7D;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--backgroundColor);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+/* Form Style */
+.form{
+    margin: 200px 0 200px 50%;
+    padding-bottom: 20px;
+    transform: translateX(-50%);
+    width: 65%;
+    background-color: var(--whiteColor);
+}
+.form .image-form{
+    display: flex;
+    background-color: #ECF0F1;
+}
+.form .image-form .paragraph{
+    margin: 22% 0 0 7%;
+    width: 300px;
+}
+.form .image-form h2{
+   font-size: 30px;
+   color: var(--textColor);
+}
+.form .image-form p{
+    margin-top: 10px;
+    font-size: 18px;
+    color: #7B7D7D;
+}
+.form .formDiv{
+    padding: 30px 50px;
+}
+.form .block{
+    margin-bottom: 30px;
+    padding: 10px;
+}
+/* Asterisk Style */
+.labelAsterisk{
+    display: flex;
+}
+.form .formDiv i{
+    font-size: 7px;
+    color: red;
+    margin-left: 5px;
+}
+
+/* Label Style */
+.form .formDiv label{
+    margin-bottom: 14px;
+    color: var(--textColor);
+}
+.form .formDiv .inputs label,
+.form .formDiv .inputOne label,
+.form .formDiv .birthDate .selects label{
+    color: var(--textColor);
+    font-size: 12px;
+    word-spacing: 2px;
+}
+.form .formDiv .days .checks .check label{
+   margin-top: 1px;
+   color: var(--textColor);
+}
+/* Inputs Style */
+.form .formDiv .inputs{
+    display: flex;
+}
+.form .formDiv .inputs .inputOne,
+.form .formDiv .inputs .inputTwo{
+    width: 50%;
+}
+.form .formDiv .inputs input,
+.form .formDiv .inputOne input,
+.form .formDiv .birthDate .selects select,
+.form .formDiv .instrument select{
+    width: 90%;
+    font-size: 18px;
+    margin-bottom: 8px;
+    padding: 10px;
+    border: 1px solid #AEB6BF;
+    border-radius: 5px;
+    outline: none;
+}
+.form .formDiv .inputs input:hover,
+.form .formDiv .inputOne input:hover,
+.form .formDiv .birthDate .selects select:hover,
+.form .formDiv .instrument select:hover,
+.form .formDiv .comments textarea:hover,
+.form .formDiv .days .checks input:hover,
+input[id="Sat"]+label:hover, 
+input[id="Sun"]+label:hover,
+input[id="Mon"]+label:hover,
+input[id="Tus"]+label:hover,
+input[id="Wed"]+label:hover,
+input[id="Thr"]+label:hover,
+input[id="Fri"]+label:hover{
+    box-shadow: 0 0 0 2px rgba(46,105,255,.25);
+}
+.form .formDiv .email .inputOne input,
+.form .formDiv .phoneNumber .inputOne input{
+    width: 70%;
+}
+.form .formDiv .birthDate .selects{
+    display: flex;
+}
+.form .formDiv .birthDate .selects select,
+.form .formDiv .instrument select{
+    width: 210px;
+    margin-right: 20px;
+    font-size: 16px;
+    color: var(--textColor);
+}
+.form .formDiv .instrument select{
+    width: 300px;
+}
+.form .formDiv .birthDate .selects option,
+.form .formDiv .instrument select{
+    color: var(--textColor);
+    font-size: 16px;
+}
+.form .formDiv .days .checks .check{
+    display: flex;
+}
+input[id="Sat"]+label, 
+input[id="Sun"]+label,
+input[id="Mon"]+label,
+input[id="Tus"]+label,
+input[id="Wed"]+label,
+input[id="Thr"]+label,
+input[id="Fri"]+label{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid #AEB6BF;
+    border-radius: 2px;
+    cursor: pointer;
+}
+input[id="Sat"]:checked  + label,
+input[id="Sun"]:checked  + label,
+input[id="Mon"]:checked  + label,
+input[id="Tus"]:checked  + label,
+input[id="Wed"]:checked  + label,
+input[id="Thr"]:checked  + label,
+input[id="Fri"]:checked  + label {
+    background-color: #0a1551;
+}
+input[id="Sat"]:checked + label:after,
+input[id="Sun"]:checked + label:after,
+input[id="Mon"]:checked + label:after,
+input[id="Tus"]:checked + label:after,
+input[id="Wed"]:checked + label:after,
+input[id="Thr"]:checked + label:after,
+input[id="Fri"]:checked + label:after{
+    position: relative;
+    top: -5px;
+    left: 2px;
+    content: '\2714';
+    font-size: 20px;
+    color: #FFF;
+}
+input[id="Sat"],
+input[id="Sun"],
+input[id="Mon"],
+input[id="Tus"],
+input[id="Wed"],
+input[id="Thr"],
+input[id="Fri"]{
+    display: none;
+}
+.form .formDiv .comments textarea{
+    margin-top: 14px;
+    font-size: 18px;
+    margin-bottom: 8px;
+    padding: 10px;
+    border: 1px solid #AEB6BF;
+    border-radius: 5px;
+    outline: none;
+}
+.form .formDiv .submit input{
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 15px 60px;
+    font-size: 18px;
+    background-color: #0a1551;
+    color: var(--whiteColor);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form .formDiv .submit input:hover{
+    opacity: 0.75;
+    transition-duration: 0.5s;
+}
+
+ /* Style Error */
+.form .formDiv .error{
+    display: flex;
+    background-color: #f23a3c;
+    margin-top: 14px;
+    width: 23%;
+    color: var(--whiteColor);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: none;
+}
+.form .formDiv .error p{
+    margin-left: 5px;
+}
+
